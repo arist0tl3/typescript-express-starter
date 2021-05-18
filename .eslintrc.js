@@ -3,18 +3,17 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint', 'import'],
   rules: {
+    'import/extensions': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': 2,
     'max-len': 0,
     'no-confusing-arrow': 0,
     'no-nested-ternary': 0,
@@ -28,5 +27,16 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-wrap-multilines': 0,
     'react/react-in-jsx-scope': 0,
+  },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './',
+      },
+    },
   },
 };

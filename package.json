@@ -34,6 +34,7 @@
     "babel-plugin-inline-json-import": "^0.3.2",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.23.2",
     "nodemon": "^2.0.4"
   }
