@@ -14,7 +14,7 @@ app.use(cors());
 
 // Use express json
 app.use(express.json());
-app.use(express.urlencoded);
+app.use(express.urlencoded({ extended: true }));
 
 // Make sure no responses are getting cached
 app.use((req, res, next) => {
